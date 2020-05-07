@@ -1,0 +1,8 @@
+{
+  "name": "@expectedsh/ui",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
