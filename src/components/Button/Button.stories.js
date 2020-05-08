@@ -8,7 +8,7 @@ export default {
 }
 
 const sizes = ["small", "medium", "large"]
-const colors = ["primary", "success", "danger"]
+const colors = ["primary", "success", "danger", "warning"]
 const elements = ["button", "a"]
 
 export const base = () => (

@@ -144,7 +144,7 @@ function Button({ children, ...props }) {
 Button.propTypes = {
   as: PropTypes.oneOf(["button", "a"]).isRequired,
   size: PropTypes.oneOf(["small", "medium", "large"]).isRequired,
-  color: PropTypes.oneOf(["primary", "success", "danger", "blue", "green", "red"]).isRequired,
+  color: PropTypes.oneOf(["primary", "success", "danger", "warning", "blue", "green", "red", "orange"]).isRequired,
   outline: PropTypes.bool,
   block: PropTypes.bool,
   disabled: PropTypes.bool,
