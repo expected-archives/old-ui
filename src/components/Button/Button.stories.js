@@ -1,5 +1,5 @@
 import React from "react"
-import { boolean, select } from "@storybook/addon-knobs"
+import { boolean, select, text } from "@storybook/addon-knobs"
 import Button from "./Button"
 
 export default {
@@ -21,7 +21,7 @@ export const base = () => (
     disabled={boolean("Disabled", false)}
     loading={boolean("Loading", false)}
   >
-    Hello World
+    {text("Text", "Hello world")}
   </Button>
 )
 
