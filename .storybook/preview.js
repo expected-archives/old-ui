@@ -7,4 +7,3 @@ addDecorator(storyFn => (
     {storyFn()}
   </ThemeProvider>
 ))
-

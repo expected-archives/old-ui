@@ -5,6 +5,7 @@ import { css } from "@emotion/core"
 
 const StyledText = styled.p(props => {
   const typo = props.theme.typography.text[props.size]
+
   return css`
     font-size: ${typo.fontSize};
     line-height: ${typo.lineHeight};
@@ -24,12 +25,12 @@ function Text({ children, ...props }) {
 }
 
 Text.propTypes = {
+  size: PropTypes.oneOf(["small", "medium", "large"]).isRequired,
   italic: PropTypes.bool,
   bold: PropTypes.bool,
   strike: PropTypes.bool,
   underline: PropTypes.bool,
   children: PropTypes.node.isRequired,
-  size: PropTypes.oneOf(["small", "medium", "large"]).isRequired,
 }
 
 Text.defaultProps = {
