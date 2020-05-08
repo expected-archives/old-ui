@@ -4,7 +4,7 @@ module.exports = {
   entry: join(__dirname, "src", "index.ts"),
   context: join(__dirname, "src"),
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    extensions: [".js", ".jsx"],
     alias: {
       "~": join(__dirname, "src"),
     },
@@ -26,7 +26,6 @@ module.exports = {
             presets: [
               "@babel/preset-env",
               "@babel/preset-react",
-              "@babel/preset-typescript",
             ],
           },
         },
