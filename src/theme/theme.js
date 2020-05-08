@@ -37,8 +37,15 @@ export default {
       },
     },
   },
+  breakpoints: {
+    extraSmall: "0",
+    small: "576px",
+    medium: "768px",
+    large: "992px",
+    extraLarge: "1200px",
+  },
   fontFamily: {
-    default: "aktiv-grotesk, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+    default: "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif",
     mono: "Consolas, monaco, monospace",
   },
   fontWeight: {
