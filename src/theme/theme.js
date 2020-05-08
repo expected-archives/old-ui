@@ -1,9 +1,9 @@
 const colorRed = {
-  100: "#D4505B",
-  200: "#C6283D",
-  300: "#B8001E",
-  400: "#A20018",
-  500: "#8C0012",
+  100: "#FC8181",
+  200: "#F56565",
+  300: "#E53E3E",
+  400: "#C53030",
+  500: "#9B2C2C",
 }
 
 const colorGreen = {
@@ -21,6 +21,15 @@ const colorBlue = {
   400: "#0042B7",
   500: "#0035A6",
 }
+
+const colorOrange = {
+  100: "#FBD38D",
+  200: "#F6AD55",
+  300: "#ED8936",
+  400: "#DD6B20",
+  500: "#C05621",
+}
+
 
 export default {
   typography: {
@@ -83,9 +92,10 @@ export default {
     primary: colorBlue,
     success: colorGreen,
     danger: colorRed,
-    // warning
+    warning: colorOrange,
     blue: colorBlue,
     green: colorGreen,
     red: colorRed,
+    orange: colorOrange,
   },
 }
