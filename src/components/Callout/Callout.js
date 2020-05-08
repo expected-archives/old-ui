@@ -8,20 +8,20 @@ import theme from "~/theme/theme";
 
 const CalloutStyled = styled.div(props => {
   const color = props.theme.color[props.color]
-
-  console.log(props.theme.color.white)
+  const hexOpacity20 = 33
 
   return css`
     position: relative;
     display: block;
     border-radius: 2px;
     padding: 10px 12px 9px;
+    margin-bottom: 16px;
     color: ${props.theme.color.black};
     font-family: ${props.theme.fontFamily.default};
     font-size: ${props.theme.typography.text["medium"].fontSize};
     font-weight: ${props.theme.typography.text["medium"].fontWeight};
-    width: ${props.block ? "100%" : "fit-content"};
-    background-color: ${color["100"]};
+    background-color: ${color["100"] + hexOpacity20};
+    ${!props.block && css`width: fit-content`}
   `
 })
 
@@ -39,9 +39,13 @@ function Callout({title, children, ...props}) {
 }
 
 Callout.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.string.isRequired,
   color: PropTypes.oneOf(["primary", "success", "danger", "warning", "blue", "green", "red", "orange"]).isRequired,
   block: PropTypes.bool,
+}
+
+Callout.defaultProps = {
+  color: "primary",
 }
 
 export default Callout

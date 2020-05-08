@@ -1,5 +1,5 @@
 import React from "react";
-import {select, text} from "@storybook/addon-knobs"
+import {boolean, select, text} from "@storybook/addon-knobs"
 import Callout from "~/components/Callout/Callout";
 
 export default {
@@ -10,8 +10,30 @@ export default {
 const colors = ["primary", "success", "danger", "warning"]
 
 export const base = () => (
-  <Callout title={text("Title", "Visually important content")} color={select("Color", colors, colors[3])}>
-    {text("Body", "The component is a simple wrapper around the CSS API that provides props for modifiers and optional title element. " +
-      "Any additional HTML props will be spread to the rendered element.")}
+  <Callout
+    title={text("Title", "Visually important content")}
+    color={select("Color", colors, colors[0])}
+    block={boolean("Block", false)}
+  >
+    {text("Body", "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore esse ipsa quod sint?")}
+  </Callout>
+)
+
+export const color = () => (
+  <>
+    {colors.map((c, index) =>
+      <Callout key={index} color={c} title="Visually important content">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore esse ipsa quod sint?
+      </Callout>)
+    }
+  </>
+)
+
+export const block = () => (
+  <Callout
+    title="Visually important content"
+    block
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dolore esse ipsa quod sint?
   </Callout>
 )
