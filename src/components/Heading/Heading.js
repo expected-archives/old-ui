@@ -7,6 +7,7 @@ const StyledHeading = styled.h1(props => {
   const typo = props.theme.typography.heading[props.size]
 
   return css`
+    font-family: ${props.theme.fontFamily.default};
     font-size: ${typo.fontSize};
     line-height: ${typo.lineHeight};
     ${!props.noMargin && css`margin-bottom: 24px`}

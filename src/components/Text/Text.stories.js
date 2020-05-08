@@ -31,7 +31,7 @@ export const base = () => (
 export const size = () =>
   sizes.map(size => (
     <Text key={size} size={size}>
-      {content}
+      This is a {size} text. {content}
     </Text>
   ))
 

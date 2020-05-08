@@ -7,6 +7,7 @@ const StyledText = styled.p(props => {
   const typo = props.theme.typography.text[props.size]
 
   return css`
+    font-family: ${props.theme.fontFamily.default};
     font-size: ${typo.fontSize};
     line-height: ${typo.lineHeight};
     font-weight: ${props.bold ? props.theme.fontWeight.bold : props.theme.fontWeight.regular};
