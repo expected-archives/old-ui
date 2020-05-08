@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
+import {css} from "@emotion/core"
 
 const StyledHeading = styled.h1(props => {
   const typo = props.theme.typography.heading[props.size]
@@ -10,11 +10,11 @@ const StyledHeading = styled.h1(props => {
     font-family: ${props.theme.fontFamily.default};
     font-size: ${typo.fontSize};
     line-height: ${typo.lineHeight};
-    ${!props.noMargin && css`margin-bottom: 24px`}
+    margin: ${props.noMargin ? '0' : '0 0 24px'};
   `
 })
 
-function Heading({ children, ...props }) {
+function Heading({children, ...props}) {
   return (
     <StyledHeading {...props}>
       {children}
