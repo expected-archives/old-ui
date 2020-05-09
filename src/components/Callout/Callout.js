@@ -13,7 +13,7 @@ const CalloutStyled = styled.div(props => {
   return css`
     position: relative;
     display: block;
-    border-radius: 2px;
+    border-radius: 4px;
     padding: 10px 12px 9px;
     margin-bottom: 16px;
     color: ${props.theme.color.black};
@@ -30,10 +30,11 @@ function Callout({title, children, ...props}) {
 
   const ColorizedHeading = styled(Heading)`
     color: ${color['500']};
+    margin-bottom: 10px;
   `
 
   return <CalloutStyled {...props} >
-    <ColorizedHeading as="h3" size="large">{title}</ColorizedHeading>
+    <ColorizedHeading as="h4" size="medium">{title}</ColorizedHeading>
     {children}
   </CalloutStyled>
 }
