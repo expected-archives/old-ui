@@ -1,9 +1,9 @@
-import PropTypes from "prop-types"
-import React from "react"
-import styled from "@emotion/styled"
-import { css } from "@emotion/core"
+import PropTypes from 'prop-types'
+import React from 'react'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 
-const StyledText = styled.p(props => {
+const StyledText = styled.p((props) => {
   const typo = props.theme.typography.text[props.size]
 
   return css`
@@ -26,7 +26,7 @@ function Text({ children, ...props }) {
 }
 
 Text.propTypes = {
-  size: PropTypes.oneOf(["small", "medium", "large"]).isRequired,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
   italic: PropTypes.bool,
   bold: PropTypes.bool,
   strike: PropTypes.bool,
@@ -35,7 +35,7 @@ Text.propTypes = {
 }
 
 Text.defaultProps = {
-  size: "medium",
+  size: 'medium',
 }
 
 export default Text
